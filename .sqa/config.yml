@@ -15,38 +15,38 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.cmv.console git:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-ivory-burmese.sh
-        container: qc.acc_paltry-peach-wrasse
+        - /usr/bin/env sh .sqa/script.cranky-burgundy-donkey.sh
+        container: qc.acc_squeaky-cerulean-earwig
   QC.Doc:
     repos:
       github.com/cessda/cessda.cmv.console find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-rose-raccoon.sh
-        container: qc.doc_pokey-thistle-otter
+        - /usr/bin/env sh .sqa/script.paltry-heliotrope-stoat.sh
+        container: qc.doc_greasy-cyan-cougar
       github.com/cessda/cessda.cmv.console git:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-malachite-frise.sh
-        container: qc.doc_muzzy-khaki-dugong
+        - /usr/bin/env sh .sqa/script.chummy-mauve-saola.sh
+        container: qc.doc_geeky-mustard-urchin
       github.com/cessda/cessda.cmv.console markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-cerise-bracke.sh
-        container: qc.doc_blurry-cobalt-loon
+        - /usr/bin/env sh .sqa/script.wheezy-cardinal-saola.sh
+        container: qc.doc_muggy-champagne-dugong
   QC.Lic:
     repos:
       github.com/cessda/cessda.cmv.console licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-tangerine-crocodile.sh
-        container: qc.lic_squirrely-apricot-saola
+        - /usr/bin/env sh .sqa/script.snappy-apricot-jackal.sh
+        container: qc.lic_stinky-auburn-maltese
   QC.Sty:
     repos:
       github.com/cessda/cessda.cmv.console checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-ochre-hummingbird.sh
-        container: qc.sty_flaky-cinnamon-koala
+        - /usr/bin/env sh .sqa/script.droopy-razzmatazz-cougar.sh
+        container: qc.sty_fuzzy-viridian-cassowary
   QC.Ver:
     repos:
       github.com/cessda/cessda.cmv.console get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-amber-quetzal.sh
-        container: qc.ver_sickly-vermilion-tiger
+        - /usr/bin/env sh .sqa/script.chewy-olivine-llama.sh
+        container: qc.ver_skimpy-denim-skunk
 timeout: 5400
