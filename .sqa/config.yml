@@ -1,0 +1,52 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.11
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.cmv.console:
+      branch: main
+      repo: https://github.com/cessda/cessda.cmv.console.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.cmv.console git:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-ivory-burmese.sh
+        container: qc.acc_paltry-peach-wrasse
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.cmv.console find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-rose-raccoon.sh
+        container: qc.doc_pokey-thistle-otter
+      github.com/cessda/cessda.cmv.console git:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-malachite-frise.sh
+        container: qc.doc_muzzy-khaki-dugong
+      github.com/cessda/cessda.cmv.console markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-cerise-bracke.sh
+        container: qc.doc_blurry-cobalt-loon
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.cmv.console licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-tangerine-crocodile.sh
+        container: qc.lic_squirrely-apricot-saola
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.cmv.console checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-ochre-hummingbird.sh
+        container: qc.sty_flaky-cinnamon-koala
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.cmv.console get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-amber-quetzal.sh
+        container: qc.ver_sickly-vermilion-tiger
+timeout: 5400
